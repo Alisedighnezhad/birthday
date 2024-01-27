@@ -1,0 +1,25 @@
+    html,body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* 100% of the viewport height */
+        margin: 0;
+        color: #4763e2;
+        background-color: #000000;
+    }
+
+    .countdown-element {
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid #e24747;
+        border-bottom: 1px solid #e24747;
+        border-radius: 8px;
+        background-color: #000000;
+        font-size:xx-large;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+          width: 80%;
+        }
+      }
