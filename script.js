@@ -40,8 +40,13 @@ function getNextYearDate() {
 }
 // for sleep timer for 12h after timerexpired
 function change(state) {
-    if (state == true && ((Number(hour) <= 11 + 12) && (Number(min)<= 30))) {
-        window.alert("hii ");
+    const now = new Date();
+    const hour = now.getHours();
+    const min = now.getMinutes();
+    const day = now.getDate();
+    const Month = now.getMonth();
+    //making sure to day is 28 feb and It continues until 23:30
+    if (state == true && ((Number(hour) <= 11 + 12) && (Number(min)<= 30) && (Number(day) == 28) && (Number(Month) == 0))) {
         countdownInterval = setInterval(updateCountdown, (12 * 60 * 60 * 1000)); // for set new counter Interval
     }
     else {
