@@ -40,7 +40,7 @@ function getNextYearDate() {
 }
 // for sleep timer for 12h after timerexpired
 function change(state) {
-    if (state == true) {
+    if (state == true && ((Number(hour) <= 11 + 12) && (Number(min)<= 30))) {
         window.alert("hii ");
         countdownInterval = setInterval(updateCountdown, (12 * 60 * 60 * 1000)); // for set new counter Interval
     }
